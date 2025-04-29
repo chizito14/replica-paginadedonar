@@ -1,0 +1,18 @@
+<div  style="height: auto;">
+    <app-header></app-header>
+    <div style="display: flex; flex-direction: column;">
+        <app-video></app-video>
+        <app-card-high></app-card-high>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content:center ;">
+        @for (i of lista; track $index) {
+            <app-card-min
+            [imagen]="i.imagen"
+            [titulo]="i.titulo"
+            [secundary]="i.secundary"
+
+            ></app-card-min>
+        }
+    </div>
+   
+</div>

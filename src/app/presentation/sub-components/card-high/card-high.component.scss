@@ -1,0 +1,135 @@
+.Cont-Card{
+    width: 100%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+}
+.Cont-Card1{
+    width: 70%;
+    height: 400px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    
+    
+}
+.Cont-Card1:hover{
+    box-shadow: 0 12px 25px 8px rgba(0, 0, 0, 0.1);
+
+}
+.Cont-der{
+    display: flex;
+    flex: 2;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; 
+    
+}
+.btn-img{
+    
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding: 8px 16px;
+        background: rgb(0, 114, 228); /* Fondo semi-transparente */
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        color: #fff6f6;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(4px); /* Efecto vidrio esmerilado */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);     
+}
+.btn-img:hover{
+    
+        background: rgb(22, 167, 225);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      
+}
+.Cont-izq{
+    display: flex;
+    flex:1;
+    width: 100%;
+    height: 100%;
+    flex-direction: column; 
+    box-sizing: border-box;
+    padding: 20px;
+    row-gap: 50px;
+
+}
+.title-izq{
+    width: 100%;
+    height: fit-content;
+    font-size: 28px;
+    font-weight: bold;
+    color: #454545;
+    text-transform: capitalize;
+    font-family: 'Lato',sans-serif;
+}
+.center{
+    width: 100%;
+    height: fit-content;
+    font-size: 14px;
+    font-weight: 600;
+    color: #454545;
+    text-transform: capitalize;
+    font-family: 'Lato',sans-serif;
+    letter-spacing: 0.01em;
+}
+.btn-izq{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    margin-bottom: 14px;
+}
+.btn-izq button{    
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 14px 40px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #2563eb, #00d4ff);
+    line-height: 24px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.btn-izq button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0.1), 
+        rgba(255,255,255,0.3), 
+        rgba(255,255,255,0.1));
+    transition: all 0.6s ease;
+    z-index: 1;
+}
+.btn-izq button:hover::before {
+    left: 100%;
+}
+.btn-izq button a{
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+

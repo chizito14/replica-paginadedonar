@@ -1,0 +1,133 @@
+.header{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+.cont-H{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    
+}
+.cont-izq{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.logo{
+    height: 100%;
+    width: 350px;
+    display: flex;
+}
+.center{
+    height: 100%;
+    width: 350px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+.cont-der{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.Sign-in{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.Sign-in button{
+    border: none;
+    background-color: #ffffff00;
+    font-size: 16px;
+    font-family: 'Lato',sans-serif;
+    font-weight: bold;
+    color: #454545;
+    line-height: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+.Sign-in button:hover {
+    /* Aplicamos el gradient solo al texto */
+    background: linear-gradient(90deg, #2563eb, #00d4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
+    color: transparent;
+    
+    /* Mantenemos las otras propiedades */
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.Sign-in button:hover::after {
+    width: 100%;
+}
+.Sign-up{
+    width: 90px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(90deg, #2563eb, #00d4ff); /* Borde gradient */
+    padding: 4px; /* Grosor del borde */
+    transition: all 0.4s ease;
+
+}
+.Sign-up::before {
+    content: '';
+    position: absolute;
+    top:3px;
+    left:3px;
+    right: 3px;
+    bottom: 3px;
+    background: white; /* Fondo inicial */
+    z-index: 0;
+    transition: all 0.4s ease;
+}
+.Sign-up BUTTON{
+    text-transform: uppercase; /* le da un cambio al texto cool */
+    position: relative;
+    z-index: 1;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-family: 'Lato',sans-serif;
+    font-weight: bold;
+    color: #454545;
+    line-height: 24px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+.Sign-up:hover::before {
+    opacity: 0; /* Hace desaparecer el fondo blanco */
+}
+.Sign-up:hover button {
+    color: white; /* Texto blanco para contraste */
+    text-shadow: 0 0 2px rgba(0,0,0,0.2);
+    background: transparent;
+}

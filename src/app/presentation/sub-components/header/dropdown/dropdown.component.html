@@ -1,0 +1,18 @@
+<!-- dropdown-outdoor.component.html -->
+<div class="dropdown-container" 
+     (mouseenter)="onMouseEnter()" 
+     (mouseleave)="onMouseLeave()">
+  
+  <button class="dropdown-trigger">
+    {{ selectedExperience }} ▼
+  </button>
+
+  <ul class="dropdown-menu" *ngIf="isOpen" [class.show]="isOpen">
+    <li *ngFor="let experience of outdoorExperiences" 
+        class="menu-item"
+        [routerLink]="experience.route"
+        routerLinkActive="active-link">
+      {{ experience.name }}
+    </li>
+  </ul>
+</div>

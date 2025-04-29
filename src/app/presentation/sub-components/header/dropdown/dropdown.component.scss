@@ -1,0 +1,113 @@
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.dropdown-trigger {
+  width: 100%;
+  padding: 12px 16px;
+  background: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+  font-family: 'Lato',sans-serif;
+  font-weight: bold;
+  line-height: 24px;
+  color: #454545;
+  transition: all 0.3s ease;
+}
+
+.dropdown-trigger:hover {
+  background: linear-gradient(90deg, #2563eb, #00d4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
+    color: transparent;
+}
+
+.dropdown-menu {
+  margin-top: 4px;
+  pointer-events: auto ;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 4px 0 0;
+  padding: 0 ;
+  list-style: none;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  transform: translateY(-5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  height: 4px; /* Altura de la zona segura */
+  width: 100%;
+  background: transparent;
+}
+
+.menu-item {
+  position: relative;
+  padding: 12px 16px;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  background: none; /* Fondo sólido para el efecto 3D */
+}
+
+.menu-item:hover {
+  transform: translateZ(10px) translateY(-2px);
+  color: #1c7cd6;
+}
+/* Línea animada */
+.menu-item::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.menu-item:hover::after {
+  width: 90%;
+  opacity: 1;
+}
+
+/* Efecto al hacer hover en el ítem activo */
+.active-link {
+  position: relative;
+  background: #f1f3f5 !important;
+}
+.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 80%;
+  height: 2px;
+  background: #1c7cd6;
+  transform: translateX(-50%);
+}
